@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a103c8b0-4997-4611-9d84-4e896f80fbb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/loading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loading.php" beforeDir="false" afterPath="$PROJECT_DIR$/loading.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/nginx/test/www/data/adverts/api/index.php" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -64,7 +64,8 @@
       <workItem from="1620199194935" duration="2626000" />
       <workItem from="1620263318787" duration="4984000" />
       <workItem from="1620271087530" duration="4142000" />
-      <workItem from="1620276146510" duration="1563000" />
+      <workItem from="1620276146510" duration="4903000" />
+      <workItem from="1620346353122" duration="6281000" />
     </task>
     <servers />
   </component>
@@ -82,5 +83,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="624" y="284" key="FileChooserDialogImpl" timestamp="1620282362769">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="624" y="284" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1620282362769" />
   </component>
 </project>

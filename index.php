@@ -13,29 +13,61 @@
 <div class="container">
     <div class="row">
         <?php
+        // ссылка на полную новость
         $link = "http://test-php-junior/news.php";
+
+        // считываем текст новости в переменную из файла
         $a = file_get_contents("news.txt", "r");
+
+        // регулярное выражение двух последних слов
         $pattern = '~[\S]+[\s]{1}[\S]+$~u';
-        $b = preg_replace($pattern, "<a href=$link>$0</a>", substr($a, 0, strpos($a, ' ', 250)));
-        echo "<h3> $b... </h3>";
+
+        // обрезаем новость до 180 символов по ближайшему пробелу, и применяем регулярное выражение
+        $b = preg_replace($pattern, "<a href=$link>$0...</a>", substr($a, 0, strpos($a, ' ', 180)));
+
+        // выводим обрезанную новость
+        echo "<h3> $b </h3>";
+
+        // создаём новое изображение из файла используя библеотеку GD
         $img_small = @imagecreatefrompng("img_small/image-small.png");
+
+        // если файл изображения отсутствует выводим изображение по умолчанию
         if (!$img_small) {
             echo "<img src=https://via.placeholder.com/200x100 class='img-thumbnail'>";
         } else {
             echo "<img src=img_small/image-small.png class='img-thumbnail'>";
         }
         ?>
+
+<!-- если файл изображения отсутствует отправляем Ajax запрос на файл loading.php-->
         <script type="text/javascript">
-            fetch('loading.php', {
-                method: 'get',
-            }).then(function (response) {
-                if (response.status >= 200 && response.status < 300) {
-                    let img = document.querySelector(".img-thumbnail");
-                    img.src = "img_small/image-small.png";
-                }
-            })
+            fetch('loading.php')
+                .then(function (response) {
+                    if (response.status === 200) { // при удачном ответе выводим изображение
+                        document.querySelector(".img-thumbnail").src = "img_small/image-small.png";
+                    }
+                })
         </script>
     </div>
+</div>
+<div>
+    <?php
+    // создаем рандомный массив
+    $array = [];
+    for ($i = 0; $i < 100; $i++) {
+        $array[] = mt_rand(1, 100);
+    }
+
+    // подсчитываем количестов вхождений элементов
+    $counted = array_count_values($array);
+
+    // выводим количестов вхождений элементов более одного
+    echo "<pre>";
+    print_r(array_filter($counted, function ($item) {
+        return $item !== 1;
+    }));
+    echo "</pre>";
+    ?>
 </div>
 </body>
 </html>
